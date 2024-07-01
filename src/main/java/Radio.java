@@ -1,13 +1,13 @@
 public class Radio {
-    public int currentRadioStation;
-    public int currentSoundLevel;
+    private int currentRadioStation;
+    private int currentSoundLevel;
 
     public int minVolume = 0;
     public int maxVolume = 100;
 
     public int minAmountOfStations = 0;
     public int currentAmountOfStations = 10;
-    public int maxAmountOfStations = currentAmountOfStations;
+    private int maxAmountOfStations = currentAmountOfStations;
     public int maxRadioStation = maxAmountOfStations - 1;
 
     public int getCurrentRadioStation() {
