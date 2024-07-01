@@ -1,4 +1,5 @@
 public class Radio {
+    // Поля
     private int currentRadioStation;
     private int currentSoundLevel;
 
@@ -9,7 +10,8 @@ public class Radio {
     private int currentAmountOfStations;
     private int maxRadioStation;
 
-    public Radio(){
+    // Конструкторы
+    public Radio() {
         this.currentAmountOfStations = 10;
         this.maxRadioStation = currentAmountOfStations - 1;
     }
@@ -23,6 +25,7 @@ public class Radio {
         this.maxRadioStation = this.currentAmountOfStations - 1;
     }
 
+    // Методы
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
@@ -67,24 +70,18 @@ public class Radio {
         currentSoundLevel = newCurrentSoundLevel;
     }
 
-
     public void higherSound() {
-        if (currentSoundLevel >= maxVolume) {
-            currentSoundLevel = maxVolume;
-        } else {
-            currentSoundLevel = currentSoundLevel + 1;
+        if (currentSoundLevel < maxVolume) {
+            currentSoundLevel++;
         }
     }
 
     public void lowerSound() {
-        if (currentSoundLevel <= minVolume) {
-            currentSoundLevel = minVolume;
-        } else {
-            currentSoundLevel = currentSoundLevel - 1;
+        if (currentSoundLevel > minVolume) {
+            currentSoundLevel--;
         }
     }
 
-    //AMOUNT OF STATIONS
     public int getCurrentAmountOfStations() {
         return currentAmountOfStations;
     }
@@ -92,12 +89,7 @@ public class Radio {
     public void setCurrentAmountOfStations(int currentAmountOfStations) {
         if (currentAmountOfStations > 0) {
             this.currentAmountOfStations = currentAmountOfStations;
-            this.maxRadioStation = this.currentAmountOfStations - 1;   }
+            this.maxRadioStation = this.currentAmountOfStations - 1;
+        }
     }
-
-//    public void setCurrentAmountOfStations(int currentAmountOfStations) {
-//        this.currentAmountOfStations = currentAmountOfStations;
-//    }
 }
-
-
